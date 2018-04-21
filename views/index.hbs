@@ -103,9 +103,11 @@
 }());
 </script>
 
+
 {{#if userData}}
   <h1>Welcome, {{userData.browserFamily}} user</h1>
   <h1>Your IP is {{userData.ipAddress}}</h1>
+    <h1>Battery is at {{userData.batteryData.percent}}%</h1>
 {{else}}
   <h1> Some thing went wrong </h1>
 {{/if}}
