@@ -1,0 +1,22 @@
+{
+  "name": "bc-analytica",
+  "version": "1.0.0",
+  "description": "See your data!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warren-Partridge/bc-analytica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Warren-Partridge/bc-analytica/issues"
+  },
+  "homepage": "https://github.com/Warren-Partridge/bc-analytica#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
