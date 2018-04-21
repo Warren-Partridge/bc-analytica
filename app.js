@@ -2,15 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-<<<<<<< HEAD
-app.get('/', (req, res) => res.send("social-media.js")
+app.get('/', (req, res) => res.send("social-media.js"));
 
-)
-=======
+
 // For getting ip info
 const ip = require('ip');
 const iploc = require('iplocation');
->>>>>>> master
 
 // For getting device and browser info
 const useragent = require('useragent');
