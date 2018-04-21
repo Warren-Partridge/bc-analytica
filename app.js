@@ -3,7 +3,7 @@ const app = express()
 const ip = require('ip')
 const iploc = require('iplocation')
 
-app.get('/', (req, res) => res.send(social-media.js)
+app.get('/', (req, res) => res.send("social-media.js")
 
 )
 
