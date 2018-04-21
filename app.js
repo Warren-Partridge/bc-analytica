@@ -20,6 +20,7 @@ app.engine('hbs', hbs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(express.static(__dirname + '/'));
 
 app.get('/', (req, res) => {
     res.send(ip.address());
