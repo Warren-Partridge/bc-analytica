@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.get('/', (req, res) => res.send("social-media.js"));
+app.get('/', (req, res) => res.send("whereLoggedIn.js"));
 
 
 // For getting ip info
