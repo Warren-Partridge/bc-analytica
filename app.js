@@ -3,7 +3,9 @@ const app = express()
 const ip = require('ip')
 const iploc = require('iplocation')
 
-app.get('/', (req, res) => res.send(ip.address()))
+app.get('/', (req, res) => res.send(social-media.js)
+
+)
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
