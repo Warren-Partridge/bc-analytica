@@ -63,4 +63,4 @@ typings/
 
 # webstorm
 .idea
-.idea/*
+.idea/
