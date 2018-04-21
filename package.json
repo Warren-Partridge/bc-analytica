@@ -21,6 +21,8 @@
     "express-handlebars": "^3.0.0",
     "ip": "^1.1.5",
     "iplocation": "^5.0.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
     "path": "^0.12.7",
     "systeminformation": "^3.38.0",
     "useragent": "^2.3.0"
