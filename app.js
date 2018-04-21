@@ -4,7 +4,6 @@ const path = require('path');
 
 app.get('/', (req, res) => res.send("whereLoggedIn.js"));
 
-
 // For getting ip info
 const ip = require('ip');
 const iploc = require('iplocation');
@@ -20,6 +19,8 @@ var hbs = require('express-handlebars')({
 app.engine('hbs', hbs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(express.static('static'))
 
 
 app.get('/', (req, res) => {

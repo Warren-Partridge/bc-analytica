@@ -1,5 +1,3 @@
-<html>
-<script>
 (function(){
 	var networks = [{
         url: "https://squareup.com/login?return_to=%2Ffavicon.ico",
@@ -97,17 +95,3 @@
         };
     });
 }());
-</script>
-
-<div>
-    <h1 id='greeting'>Hello, YOURNAME</h1>
-</div>
-{{#if apples}}
-  <h1>{{apples.data}} </h1>
-{{else}}
-  <h1> Some thing went wrong </h1>
-{{/if}}
-
-<p id = 'socialMedia'></p>
-
-</html>
