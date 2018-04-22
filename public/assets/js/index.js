@@ -105,18 +105,17 @@ findIP.then(ip =>{
 	}
 )
 .catch(e => console.error(e));
-function initMap(){
-
-	var uluru = {lat: 42.360082, lng: -71.058880};
-	var map = new google.maps.Map(document.getElementById('map'), {
-    	zoom: 4,
-		center: uluru
-    });
-	var marker = new google.maps.Marker({
-    	position: uluru,
-    	map: map
-	});
-}
+// function initMap(){
+// 	var uluru = {lat: 42.360082, lng: -71.058880};
+// 	var map = new google.maps.Map(document.getElementById('map'), {
+//     	zoom: 4,
+// 		center: uluru
+//     });
+// 	var marker = new google.maps.Marker({
+//     	position: uluru,
+//     	map: map
+// 	});
+// }
 
 var battery = navigator.getBattery().then(result => {
 	var para = document.createElement("span");
