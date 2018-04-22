@@ -105,7 +105,7 @@ findIP.then(ip =>{
 	}
 )
 .catch(e => console.error(e));
-function initMap() {
+function initMap(){
 
 	var uluru = {lat: 42.360082, lng: -71.058880};
 	var map = new google.maps.Map(document.getElementById('map'), {
