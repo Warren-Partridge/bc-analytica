@@ -126,14 +126,23 @@ var battery = navigator.getBattery().then(result => {
 
 var parser = new UAParser();
 
-var battery = parser.getDevice().then(result => {
-	var para = document.createElement("span");
-	var node = document.createTextNode(result.level);
-	para.appendChild(node);
-	var element = document.getElementById("other-content");
-	element.appendChild(para);
-	})
-	.catch(error => console.log(error));
+var browser = document.getElementById("browser-content");
+	browser.innerText = parser.getBrowser().name;
+
+var computer = document.getElementById("os-content");
+	computer.innerText = parser.getOS().name;
+
+var platform = document.getElementById("platform-content");
+	platform.innerText = navigator.platform;
+
+// var info = parser.getDevice().then(result => {
+// 	var para = document.createElement("span");
+// 	var node = document.createTextNode(result.level);
+// 	para.appendChild(node);
+// 	var element = document.getElementById("other-content");
+// 	element.innerHTML(parser.getDevice());
+// 	})
+// 	.catch(error => console.log(error));
 
 
 
