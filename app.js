@@ -21,6 +21,9 @@ app.engine('hbs', hbs);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+
 
 passport.use(new Strategy({
     clientID: "359392861234682",
