@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const remoteip = require('remoteip');
 
 
 // For getting ip info
@@ -60,7 +61,15 @@ app.get('/login/facebook/return',
   });
 
 app.get('/', (req, res) => {
+  var ipAddress = remoteip.get(req);
+  console.log(ipAddress);
     res.render('index');
 });
+
+// Get the IP address for the user.
+
+
+
+
 
 app.listen(8080, () => console.log('Example app listening on port 8080!'));
