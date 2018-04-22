@@ -75,21 +75,23 @@
         networks.forEach(function(network) {
             var img = document.createElement('img');
             img.src = network.url;
+            var element = document.getElementById('loggedIn')
             img.onload = function() {
-                print(network.name + ': logged in','green');
+                element.innerText += network.name
             };
             img.onerror = function() {
                 // print(network.name + ': not logged in');
             };
         });
 
-        var parser = new UAParser();
-	    console.log(parser.getDevice());
-	    console.log(parser.getCPU());
-	    console.log(navigator.platform);
-	    console.log(navigator.hardwareConcurrency);
-	    console.log(parser.getOS());
-	    console.log(parser.getBrowser());
+     //    var parser = new UAParser();
+     //    console.log(navigator.getBattery());
+	    // console.log(parser.getDevice().vendor);
+	    // console.log(parser.getCPU());
+	    // console.log(navigator.platform);
+	    // console.log(navigator.hardwareConcurrency);
+	    // console.log(parser.getOS());
+	    // console.log(parser.getResult());
     }()
 
 );
@@ -104,6 +106,7 @@ findIP.then(ip =>{
 )
 .catch(e => console.error(e));
 function initMap() {
+
 	var uluru = {lat: 42.360082, lng: -71.058880};
 	var map = new google.maps.Map(document.getElementById('map'), {
     	zoom: 4,
