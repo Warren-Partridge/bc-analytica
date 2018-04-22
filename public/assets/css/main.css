@@ -3192,7 +3192,6 @@
 /* Footer */
 
 	#footer {
-		padding: 5em 0 6em 0 ;
 		background-color: #f6f6f6;
 	}
 
@@ -3384,7 +3383,7 @@
 	-ms-align-items: center;
 	align-items: center;
 	margin-bottom: 6em;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .feature:last-child {
