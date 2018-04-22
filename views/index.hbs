@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
-    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
 
 </head>
 <body>
@@ -83,33 +82,15 @@
 										    </head>
 										    <body>
 										    <div id="map" style="border-radius:5px"></div>
-										    <script>
-												var findIP = new Promise(r=>{var w=window,a=new (w.RTCPeerConnection||w.mozRTCPeerConnection||w.webkitRTCPeerConnection)({iceServers:[]}),b=()=>{};a.createDataChannel("");a.createOffer(c=>a.setLocalDescription(c,b,b),b);a.onicecandidate=c=>{try{c.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g).forEach(r)}catch(e){}}});
-
-                                                /*Usage example*/
-                                                findIP.then(ip => console.log(ip)).catch(e => console.error(e));
-                                                console.log("here");
-                                                function initMap() {
-                                                    var uluru = {lat: 42.360082, lng: -71.058880};
-                                                    var map = new google.maps.Map(document.getElementById('map'), {
-                                                        zoom: 4,
-                                                        center: uluru
-                                                    });
-                                                    var marker = new google.maps.Marker({
-                                                        position: uluru,
-                                                        map: map
-                                                    });
-                                                }
-										    </script>
-										    <script async defer
+										    <!-- <script async defer
                                                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApF0Od0ihyPwYVFrqrFy961F7RCpZOPA&callback=initMap">
-										    </script>
+										    </script> -->
 										    </body>
 
 										</div></span>
                     <div class="content">
                         <h2>Your location: Boston College</h2>
-                        <p>Websites can find this from your IP, 136.167.204.223, and Google's geolocation API, anyone can know your location.</p>
+                        <p>Websites can find this from your IP, <span id="theIP"></span>, and Google's geolocation API, anyone can know your location.</p>
                         <ul class="actions">
                             <li>
                                 <a href="#" class="button alt">More</a>
@@ -122,46 +103,10 @@
                     <span class="image"><img src="images/pic02.jpg" alt="" style="width: 200rem; height: 25rem"/></span>
                     <div class="content">
                         <h2>Your device</h2>
-                        <span id="browser-type-content"></span>
                         <span>.Your battery is at </span>
                         <br>
-                        <span id="battery-level-content"></span>
+                        <span id="battery-content"></span>
                         <span> percent. All this information is natively available from the Navigator js object.</span>
-                        <script>
-
-
-
-                            var device = navigator.language().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("device-type-content");
-                            element.appendChild(para);
-                            }).catch(error => console.log(error));
-
-
-                            var device = navigator.language().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("browser-type-content");
-                            element.appendChild(para);
-                            }).catch(error => console.log(error));
-
-
-                            var battery = navigator.getBattery().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result.level);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("battery-level-content");
-                            element.appendChild(para);
-                            })
-
-                            .catch(error => console.log(error));
-                        </script>
                         <ul class="actions">
                             <li>
                                 <a href="#" class="button alt">More</a>
@@ -196,53 +141,9 @@
                     <span class="image"><img src="images/pic04.jpg" alt="" style="width: 200rem; height: 25rem"/></span>
                     <div class="content">
                         <h2>Your device</h2>
-                        <span>You are connected on a </span>
-                        <span id="device-type-content"></span>
-                        <span> running</span>
-                        <span id="browser-type-content"></span>
                         <span>.Your battery is at </span>
-                        <span id="battery-level-content"></span>
+                        <span id="battery-content"></span>
                         <span> percent. All this information is natively available from the Navigator js object.</span>
-                        <script>
-
-
-
-                            var device = navigator.language().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("device-type-content");
-                            element.appendChild(para);
-                            }).catch(error => console.log(error));
-
-
-                            var device = navigator.language().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("browser-type-content");
-                            element.appendChild(para);
-                            }).catch(error => console.log(error));
-
-
-                            var battery = navigator.getBattery().then(result => {
-                                var para = document.createElement("span");
-                            var node = document.createTextNode(result.level);
-
-                            para.appendChild(node);
-                            var element = document.getElementById("battery-level-content");
-                            element.appendChild(para);
-                            })
-
-                            .catch(error => console.log(error));
-                        </script>
-                        <ul class="actions">
-                            <!-- <li>
-                                <a href="#" class="button alt">More</a>
-                            </li> -->
-                        </ul>
                     </div>
                 </div>
 
@@ -263,7 +164,7 @@
 
                 <div class="feature right">
                     <span class="image"><img src="images/pic02.jpg" alt="" /></span>
-                    <div class="content loggedIn">
+                    <div class="content">
                         <h2>You are logged in on</h2>
                         <span id="loggedIn"></span>
                         
@@ -319,6 +220,7 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApF0Od0ihyPwYVFrqrFy961F7RCpZOPA&callback=initMap">
 </script>
+<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
