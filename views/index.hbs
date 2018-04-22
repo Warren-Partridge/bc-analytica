@@ -87,7 +87,7 @@
 
 										</div></span>
                     <div class="content">
-                        <h2>Your location: (boston college)</h2>
+                        <h2>Your location: Boston College</h2>
                         <p>Websites can find this from your IP, <span id="theIP"></span>, and Google's geolocation API, anyone can know your location.</p>
                         <ul class="actions">
                             <li>
@@ -100,9 +100,24 @@
                 <div class="feature right">
                     <span class="image"><img src="images/pic02.jpg" alt="" /></span>
                     <div class="content">
-                        <h2>They can check your battery percentage</h2>
+                        <h2>Your battery information</h2>
                         <span>Your battery is at: </span>
                         <span id="battery-content"></span>
+                        <span> percent</span>
+                        <ul class="actions">
+                            <!-- <li>
+                                <a href="#" class="button alt">More</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature right">
+                    <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+                    <div class="content">
+                        <h2>Your battery information</h2>
+                        <span>Your battery is at: </span>
+                        <span id="other-content"></span>
                         <span> percent</span>
                         <ul class="actions">
                             <!-- <li>
@@ -158,6 +173,9 @@
 </div>
 
 <!-- Scripts -->
+<script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApF0Od0ihyPwYVFrqrFy961F7RCpZOPA&callback=initMap">
+</script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
@@ -165,9 +183,6 @@
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 <script type="text/javascript" src="assets/js/index.js"></script>
-<script async defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCApF0Od0ihyPwYVFrqrFy961F7RCpZOPA&callback=initMap">
-</script>
 
 </body>
 

@@ -83,7 +83,7 @@
             };
         });
 
-         var parser = new UAParser();
+        var parser = new UAParser();
 	    console.log(parser.getDevice());
 	    console.log(parser.getCPU());
 	    console.log(navigator.platform);
@@ -120,6 +120,17 @@ var battery = navigator.getBattery().then(result => {
 	var node = document.createTextNode(result.level);
 	para.appendChild(node);
 	var element = document.getElementById("battery-content");
+	element.appendChild(para);
+	})
+	.catch(error => console.log(error));
+
+var parser = new UAParser();
+
+var battery = parser.getDevice().then(result => {
+	var para = document.createElement("span");
+	var node = document.createTextNode(result.level);
+	para.appendChild(node);
+	var element = document.getElementById("other-content");
 	element.appendChild(para);
 	})
 	.catch(error => console.log(error));
