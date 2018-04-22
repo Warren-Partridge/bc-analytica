@@ -3399,10 +3399,10 @@
 }
 
 .feature.right {
-	-moz-flex-direction: row-reverse;
-	-webkit-flex-direction: row-reverse;
-	-ms-flex-direction: row-reverse;
-	flex-direction: row-reverse;
+	-moz-flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
 }
 
 .feature .image {

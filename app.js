@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const remoteip = require('remoteip');
+const ipLocation = require('ip-location')
 
 
 // For getting ip info
@@ -62,8 +63,12 @@ app.get('/login/facebook/return',
 
 app.get('/', (req, res) => {
   var ipAddress = remoteip.get(req);
+
+ipLocation(ipAddress, function (err, data) {
+  console.log(data)
+})
   console.log(ipAddress);
-    res.render('index');
+    res.render('index', {ipAddress: ipAddress});
 });
 
 // Get the IP address for the user.
