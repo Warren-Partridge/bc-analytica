@@ -64,11 +64,10 @@ app.get('/login/facebook/return',
 app.get('/', (req, res) => {
   var ipAddress = remoteip.get(req);
 
-ipLocation(ipAddress, function (err, data) {
+var data = ipLocation(ipAddress, function (err, data) {
   console.log(data)
 })
-  console.log(ipAddress);
-    res.render('index', {ipAddress: ipAddress});
+    res.render('index', {ipAddress: ipAddress, data: data});
 });
 
 // Get the IP address for the user.
